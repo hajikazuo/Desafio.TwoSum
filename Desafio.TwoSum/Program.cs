@@ -3,7 +3,7 @@ using System.Numerics;
 
 namespace Desafio.TwoSum
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -15,6 +15,8 @@ namespace Desafio.TwoSum
 
             var test3 = new Solution().TwoSum(new int[] { 3, 3 }, 6);
             Console.WriteLine($"Test 3: [{test3[0]}, {test3[1]}]");
+
+            var test4 = new Solution().TwoSum(new int[] { 1, 5 , 3 }, 10);
         }
 
         public class Solution
@@ -25,7 +27,7 @@ namespace Desafio.TwoSum
                 {
                     for (int j = 1; j < nums.Length; j++)
                     {
-                        if (nums[i] + nums[j] == target)
+                        if (nums[i] + nums[j] == target && i != j)
                         {
                             return new int[] { i, j };
                         }
