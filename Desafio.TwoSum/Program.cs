@@ -25,9 +25,9 @@ namespace Desafio.TwoSum
             {
                 for (int i = 0; i < nums.Length; i++)
                 {
-                    for (int j = 1; j < nums.Length; j++)
+                    for (int j = i + 1; j < nums.Length; j++)
                     {
-                        if (nums[i] + nums[j] == target && i != j)
+                        if (nums[i] + nums[j] == target)
                         {
                             return new int[] { i, j };
                         }
